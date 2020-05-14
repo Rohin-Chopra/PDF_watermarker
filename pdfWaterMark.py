@@ -9,6 +9,8 @@ wtr_file = files[1]
 def user_input():
     print('What is the name of the file you want to save the new pdf?')
     new_pdf = input()
+    if(new_pdf[-4:] != '.pdf'):#* Checks if the filename specified has .pdf at the end of it, otherwise concatenates .pdf to it
+        new_pdf = new_pdf + '.pdf'
     return new_pdf
 
 def pdf_watermarker(new_pdf):
